@@ -27,7 +27,9 @@ different kind of Cancer
 
 }
 
-Class DBConnector
+Class DBConnector{
+Data Banks reader
+}
 
 Main --> DBConnector
 Main-->CancerProgram
