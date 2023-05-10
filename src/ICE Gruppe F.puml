@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+
+Class Main{
+Questions?
+Scanner
+}
+Class CancerProgram{
+ChanceProcent
+
+}
+Class User{
+LogIn
+Questioner
+Symptoms
+Sickness
+Diet
+LifeStyle
+Stress
+Depression
+}
+Class CancerInfo{
+Infomation about
+diffrent kind of Cancer
+
+}
+
+Main-->CancerProgram
+CancerProgram-->User
+User-->CancerInfo
+
+@enduml
