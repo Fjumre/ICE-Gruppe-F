@@ -22,11 +22,14 @@ Stress
 Depression
 }
 Class CancerInfo{
-Infomation about
-diffrent kind of Cancer
+Information about
+different kind of Cancer
 
 }
 
+Class DBConnector
+
+Main --> DBConnector
 Main-->CancerProgram
 CancerProgram-->User
 User-->CancerInfo
