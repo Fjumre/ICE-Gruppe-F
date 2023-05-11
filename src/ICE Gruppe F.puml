@@ -6,6 +6,7 @@
 Class Main{
 Questions?
 Scanner;
+List<User>users = new Arraylist<>();
 }
 
 Class CancerProgram{
@@ -23,7 +24,6 @@ String Questioner;
 Symptoms;
 Sickness;
 LifeStyle;
-List<User>users = new Arraylist<>();
 }
 
 Class CancerInfo{
