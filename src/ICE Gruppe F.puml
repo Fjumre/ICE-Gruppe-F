@@ -5,26 +5,33 @@
 
 Class Main{
 Questions?
-Scanner
+Scanner;
 }
-Class CancerProgram{
-ChanceProcent
 
+Class CancerProgram{
+List<Symptoms>symptoms;
+List<CancerSickness> cs;
+ChanceProcent;
+SearchBySymptoms();
+SearchByCancerSickness();
 }
+
 Class User{
-LogIn
-Questioner
-Symptoms
-Sickness
-Diet
-LifeStyle
-Stress
-Depression
+List<User>users;
+LogIn;
+String Questioner;
+Symptoms;
+Sickness;
+Diet;
+LifeStyle;
+Stress;
+Depression;
 }
+
 Class CancerInfo{
+
 Information about
 different kind of Cancer
-
 }
 
 Class DBConnector{
