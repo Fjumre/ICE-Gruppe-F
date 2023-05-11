@@ -19,6 +19,8 @@ SearchByCancerSickness();
 Class User{
 UserName;
 PassWord;
+GetUserName;
+GetPassWord;
 LogIn;
 String Questioner;
 Symptoms;
