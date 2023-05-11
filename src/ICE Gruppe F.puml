@@ -29,8 +29,7 @@ LifeStyle;
 public User (userName, passWord)
 this.UserName = userName;
 this.PassWord = passWord;
-this.CancerSickness = new ArrayList<>();
-this.Symptoms = new ArrayList<>();
+this.Cancer = new ArrayList<>();
 }
 
 
@@ -41,10 +40,8 @@ different kind of Cancer
 }
 
 Class DBConnector{
-List<Symptoms>symptoms;
-List<CancerSickness> cs;
-List<User>users;
 List<CancerInfo> ci;
+List<User>users;
 Data Banks reader
 }
 
@@ -52,5 +49,6 @@ Main *-- DBConnector
 Main *-- CancerProgram
 CancerProgram *-- User
 DBConnector *-- CancerInfo
+CancerProgram *-- CancerInfo
 
 @enduml
