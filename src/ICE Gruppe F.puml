@@ -22,10 +22,7 @@ LogIn;
 String Questioner;
 Symptoms;
 Sickness;
-Diet;
 LifeStyle;
-Stress;
-Depression;
 }
 
 Class CancerInfo{
