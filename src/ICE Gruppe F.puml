@@ -26,7 +26,13 @@ String Questioner;
 Symptoms;
 Sickness;
 LifeStyle;
+public User (userName, passWord)
+this.UserName = userName;
+this.PassWord = passWord;
+this.CancerSickness = new ArrayList<>();
+this.Symptoms = new ArrayList<>();
 }
+
 
 Class CancerInfo{
 
