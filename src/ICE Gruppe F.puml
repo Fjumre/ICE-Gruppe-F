@@ -35,12 +35,13 @@ Class DBConnector{
 List<Symptoms>symptoms;
 List<CancerSickness> cs;
 List<User>users;
+List<CancerInfo> ci;
 Data Banks reader
 }
 
 Main *-- DBConnector
 Main *-- CancerProgram
 CancerProgram *-- User
-User *-- CancerInfo
+DBConnector *-- CancerInfo
 
 @enduml
