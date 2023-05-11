@@ -9,15 +9,15 @@ Scanner;
 }
 
 Class CancerProgram{
-List<Symptoms>symptoms;
-List<CancerSickness> cs;
+
 ChanceProcent;
 SearchBySymptoms();
 SearchByCancerSickness();
 }
 
 Class User{
-List<User>users;
+UserName;
+PassWord;
 LogIn;
 String Questioner;
 Symptoms;
@@ -35,6 +35,9 @@ different kind of Cancer
 }
 
 Class DBConnector{
+List<Symptoms>symptoms;
+List<CancerSickness> cs;
+List<User>users;
 Data Banks reader
 }
 
