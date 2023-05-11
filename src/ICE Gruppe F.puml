@@ -9,8 +9,8 @@ Scanner;
 }
 
 Class CancerProgram{
-
 ChanceProcent;
+SearchByCancerInfo();
 SearchBySymptoms();
 SearchByCancerSickness();
 }
