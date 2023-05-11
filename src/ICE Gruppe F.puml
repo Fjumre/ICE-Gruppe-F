@@ -23,6 +23,7 @@ String Questioner;
 Symptoms;
 Sickness;
 LifeStyle;
+List<User>users = new Arraylist<>();
 }
 
 Class CancerInfo{
