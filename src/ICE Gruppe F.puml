@@ -31,9 +31,9 @@ Class DBConnector{
 Data Banks reader
 }
 
-Main --> DBConnector
-Main-->CancerProgram
-CancerProgram-->User
-User-->CancerInfo
+Main *-- DBConnector
+Main *-- CancerProgram
+CancerProgram *-- User
+User *-- CancerInfo
 
 @enduml
