@@ -29,7 +29,7 @@ LifeStyle;
 public User (userName, passWord)
 this.UserName = userName;
 this.PassWord = passWord;
-this.Cancer = new ArrayList<>();
+this.CancerInfo = new ArrayList<>();
 }
 
 
