@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.sql.*;
 import java.util.List;
 
+
+
 public class DBConnector {
 
     // database URL
@@ -11,9 +13,36 @@ public class DBConnector {
     //  Database credentials
     static final String USER = "root";
     static final String PASS = "G5no394E!";
+    private static String[] newUser;
+
+    public static List<User> createUser() {
+            List<User> users = new ArrayList<>();
+            Connection conn = null;
+            PreparedStatement pstmnt = null;
+
+            try {
+
+                String query = "CREATE USER 'username'@'localhost'IDENTIFIED BY PASSWORD 'password' FROM ice.user; ";
+                conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                pstmnt = conn.prepareStatement(query);
+
+                for (int i=0;  i < newUser.length; i++) {
+                    pstmnt.setString(i, newUser[0]);
+                }
+                pstmnt.execute();
+                pstmnt.close();
+
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            return users;
+        }
 
 
-    public List<CancerInfo> getCancerData() {
+
+
+
+    public static List<CancerInfo> getCancerData() {
         List<CancerInfo> ci = new ArrayList<>();
         Connection conn = null;
         PreparedStatement stmt = null;
