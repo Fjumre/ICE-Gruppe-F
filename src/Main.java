@@ -1,7 +1,11 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        List<User> userList = DBConnector.createUser();
+
+        List<CancerInfo> cancerList = DBConnector.getCancerData();
 
         Scanner scanner = new Scanner(System.in);
         boolean questionnaire = true;
