@@ -39,9 +39,6 @@ public class DBConnector {
         }
 
 
-
-
-
     public static List<CancerInfo> getCancerData() {
         List<CancerInfo> ci = new ArrayList<>();
         Connection conn = null;
