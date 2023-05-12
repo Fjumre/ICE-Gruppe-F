@@ -5,35 +5,50 @@
 
 Class Main{
 Questions?
-Scanner
+Scanner;
+List<User>users = new Arraylist<>();
 }
-Class CancerProgram{
-ChanceProcent
 
+Class CancerProgram{
+ChanceProcent;
+SearchByCancerInfo();
+SearchBySymptoms();
+SearchByCancerSickness();
 }
+
 Class User{
-LogIn
-Questioner
-Symptoms
-Sickness
-Diet
-LifeStyle
-Stress
-Depression
+UserName;
+PassWord;
+GetUserName;
+GetPassWord;
+LogIn;
+String Questioner;
+Symptoms;
+Sickness;
+LifeStyle;
+public User (userName, passWord)
+this.UserName = userName;
+this.PassWord = passWord;
+this.CancerInfo = new ArrayList<>();
 }
+
+
 Class CancerInfo{
+
 Information about
 different kind of Cancer
-
 }
 
 Class DBConnector{
+List<CancerInfo> ci;
+List<User>users;
 Data Banks reader
 }
 
-Main --> DBConnector
-Main-->CancerProgram
-CancerProgram-->User
-User-->CancerInfo
+Main *-- DBConnector
+Main *-- CancerProgram
+CancerProgram *-- User
+DBConnector *-- CancerInfo
+CancerProgram *-- CancerInfo
 
 @enduml
