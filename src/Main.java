@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     static UserHandler userhandler = new UserHandler("user.txt");
     static TextUi textUi = new TextUi(userhandler);
-    static List<CancerInfo> ciList =DBConnector.getCancerData();
+    static List<CancerInfo> ciList = DBConnector.getCancerData();
     static boolean showCancer = false;
     private static int chosenOption;
 
@@ -12,8 +12,7 @@ public class Main {
         //List<User> users= DBConnector.createUser();
         UserHandler userhandler = new UserHandler("user.txt");
         TextUi textUi = new TextUi(userhandler);
-        
-        
+
 
         try {
             userhandler.loadUsers();
@@ -71,60 +70,22 @@ public class Main {
             sc.close();
 
         }
-    if (showCancer){
-        for(int i = 1; i <= ciList.size(); i++){
-        System.out.println(i + " " + ciList.get(i-1).getName());
-    } try {
-            chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
-            String st = ciList.get(chosenOption-1).getName();
-            System.out.println("You are chosen: " + st);
-            showCancer = false;
-        } catch (NumberFormatException e){
-            System.out.println("Your input is not valid, please try again.");
-        }
-
-
-    }
-
-
-    }
-        /*Scanner sc = new Scanner(System.in);
-
-        boolean questionnaire = true;
-        boolean symptoms = true;
-
-        String y = null;
-        String n = null;
-
-        if (questionnaire) {
-            System.out.println("In the following questioner, answer Yes with Y or No with N");
-            String a1, a2, a3;
-
-            System.out.println("Do you smoke? (y/n)");
-            System.out.print("");
-            a1 = scanner.nextLine();  // consume the newline character
-
-            System.out.println("Do you regularly do any form for exercise or motion? (y/n)");
-            System.out.print("");
-            a2 = scanner.nextLine();
-
-            System.out.println("Do you take any type of sun bath or walk under the sun at least 4 hours a day? (y/n)");
-            System.out.print("");
-            a3 = scanner.nextLine();
-
-            System.out.println("Your answers: ");
-            System.out.println("Question 1: " + a1);
-            System.out.println("Question 2: " + a2);
-            System.out.println("Question 3: " + a3);
-
-            if (a1 + a2 + a3 == y){
-                System.out.println();
+        if (showCancer) {
+            for (int i = 1; i <= ciList.size(); i++) {
+                System.out.println(i + " " + ciList.get(i - 1).getName());
+            }
+            try {
+                chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
+                String st = ciList.get(chosenOption - 1).getName();
+                System.out.println("You are chosen: " + st);
+                showCancer = false;
+            } catch (NumberFormatException e) {
+                System.out.println("Your input is not valid, please try again.");
             }
 
-            scanner.close();
 
         }
-        */
 
 
     }
+}
