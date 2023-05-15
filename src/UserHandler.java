@@ -34,7 +34,7 @@ public class UserHandler {
 
     public static boolean createUser(String username, String password) {
         for (User user : users) {
-            if (user.getName().equals(username))
+            if (user.getName().equals(username) && user.getPassword().equals(password))
                 return false;
         }
         users.add(new User(username, password));

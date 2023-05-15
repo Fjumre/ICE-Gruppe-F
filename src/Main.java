@@ -5,8 +5,7 @@ public class Main {
     static TextUi textUi = new TextUi(userhandler);
 
     public static void main(String[] args) {
-        UserHandler userhandler = new UserHandler("user.txt");
-        TextUi textUi = new TextUi(userhandler);
+
         try {
             userhandler.loadUsers();
         } catch (Exception e) {
