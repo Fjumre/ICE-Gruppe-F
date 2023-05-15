@@ -77,7 +77,7 @@ public class Main {
     } try {
             chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
             String st = ciList.get(chosenOption-1).getName();
-            System.out.println("Du har valgt: " + st);
+            System.out.println("You are chosen: " + st);
             showCancer = false;
         } catch (NumberFormatException e){
             System.out.println("Your input is not valid, please try again.");
