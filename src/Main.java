@@ -37,7 +37,7 @@ public class Main {
         }
 
         Scanner sc = new Scanner(System.in);
-        boolean loginMenu = false;
+        boolean loginMenu = true;
 
         if (loginMenu) {
             System.out.println("In the following questioner, answer Yes with Y or No with N");

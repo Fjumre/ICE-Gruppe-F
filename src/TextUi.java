@@ -25,6 +25,7 @@ public class TextUi {
         String password = scanner.nextLine();
         if (UserHandler.login(userName, password)) {
             System.out.println("Welcome " + userName);
+            System.out.println("Press Enter to check the questionnaire");
             return scanner.nextLine();
         } else {
 
