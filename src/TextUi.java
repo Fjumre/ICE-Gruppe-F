@@ -48,6 +48,7 @@ public class TextUi {
             System.out.println("Welcome " + userName);
         } else {
             System.out.println("Sorry, the username or password can not be used");
+            createUserMenu();
         }
 
     }
