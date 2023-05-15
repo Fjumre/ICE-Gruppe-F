@@ -2,9 +2,12 @@ public class CancerInfo {
 
     int ID;
     String name;
-    public CancerInfo(int ID, String name) {
+    String symptoms;
+    Float chance;
+    public CancerInfo(int ID, String name, String symptoms, Float chance) {
         this.ID = ID;
         this.name = name;
+        this.chance = chance;
     }
 
     public int getID() {
@@ -13,5 +16,13 @@ public class CancerInfo {
 
     public String getName() {
         return name;
+    }
+
+    public String getSymptoms(){
+        return symptoms;
+    }
+
+    public Float getChance() {
+        return chance;
     }
 }
