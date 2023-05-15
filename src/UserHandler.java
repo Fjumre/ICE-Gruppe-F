@@ -3,10 +3,12 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserHandler {
-    static ArrayList<User> users = new ArrayList<>();
+    //static ArrayList<User> users = new ArrayList<>();
+    static List<User> users= DBConnector.createUser();
     File file;
     Scanner scanner;
 

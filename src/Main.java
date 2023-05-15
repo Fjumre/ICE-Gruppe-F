@@ -1,10 +1,19 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     static UserHandler userhandler = new UserHandler("user.txt");
     static TextUi textUi = new TextUi(userhandler);
+    static List<CancerInfo> ciList =DBConnector.getCancerData();
+    static boolean showCancer = false;
+    private static int chosenOption;
 
     public static void main(String[] args) {
+        //List<User> users= DBConnector.createUser();
+        UserHandler userhandler = new UserHandler("user.txt");
+        TextUi textUi = new TextUi(userhandler);
+        
+        
 
         try {
             userhandler.loadUsers();
@@ -62,6 +71,20 @@ public class Main {
             sc.close();
 
         }
+    if (showCancer){
+        for(int i = 1; i <= ciList.size(); i++){
+        System.out.println(i + " " + ciList.get(i-1).getName());
+    } try {
+            chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
+            String st = ciList.get(chosenOption-1).getName();
+            System.out.println("Du har valgt: " + st);
+            showCancer = false;
+        } catch (NumberFormatException e){
+            System.out.println("Your input is not valid, please try again.");
+        }
+
+
+    }
 
 
     }
