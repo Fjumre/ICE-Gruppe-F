@@ -110,7 +110,7 @@ public class DBConnector {
         }//end try
         return ci;
     }
-    public void readName(String cancer) {
+    /*public void readName(String cancer) {
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -166,5 +166,5 @@ public class DBConnector {
 
 
 
-    }
+    }*/
 }

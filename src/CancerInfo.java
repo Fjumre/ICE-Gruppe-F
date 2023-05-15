@@ -7,6 +7,7 @@ public class CancerInfo {
     public CancerInfo(int ID, String name, String symptoms, Float chance) {
         this.ID = ID;
         this.name = name;
+        this.symptoms = symptoms;
         this.chance = chance;
     }
 

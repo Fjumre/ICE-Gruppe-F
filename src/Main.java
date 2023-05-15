@@ -7,6 +7,8 @@ public class Main {
     static List<CancerInfo> ciList = DBConnector.getCancerData();
     static boolean showCancer = false;
     static boolean showChance = false;
+    static boolean showSymptoms = false;
+    static boolean showId = false;
     private static int chosenOption;
 
     public static void main(String[] args) {
@@ -72,36 +74,60 @@ public class Main {
 
         }
 
-            if (showCancer) {
+        if (showCancer) {
+            for (int i = 1; i <= ciList.size(); i++) {
+                System.out.println(i + " " + ciList.get(i - 1).getName());
+            }
+            try {
+                chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
+                String st = ciList.get(chosenOption - 1).getName();
+                System.out.println("You have chosen: " + st);
+                showCancer = false;
+            } catch (NumberFormatException e) {
+                System.out.println("Your input is not valid, please try again.");
+            }
+
+            if (showChance) {
                 for (int i = 1; i <= ciList.size(); i++) {
-                    System.out.println(i + " " + ciList.get(i - 1).getName());
+                    System.out.println(i + " " + ciList.get(i - 1).getChance());
                 }
                 try {
                     chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
-                    String st = ciList.get(chosenOption - 1).getName();
+                    String st = String.valueOf(ciList.get(chosenOption - 1).getChance());
                     System.out.println("You have chosen: " + st);
-                    showCancer = false;
+                    showChance = false;
                 } catch (NumberFormatException e) {
                     System.out.println("Your input is not valid, please try again.");
                 }
 
-                if (showChance) {
-                    for (int i = 1; i <= ciList.size(); i++) {
-                        System.out.println(i + " " + ciList.get(i - 1).getChance());
-                    }
-                    try {
-                        chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
-                        String st = String.valueOf(ciList.get(chosenOption - 1).getChance());
-                        System.out.println("You have chosen: " + st);
-                        showChance = false;
-                    } catch (NumberFormatException e) {
-                        System.out.println("Your input is not valid, please try again.");
-                    }
+            }
+            if (showSymptoms) {
+                for (int i = 1; i <= ciList.size(); i++) {
+                    System.out.println(i + " " + ciList.get(i - 1).getSymptoms());
+                }
+                try {
+                    chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
+                    String st = String.valueOf(ciList.get(chosenOption - 1).getSymptoms());
+                    System.out.println("You have chosen: " + st);
+                    showChance = false;
+                } catch (NumberFormatException e) {
+                    System.out.println("Your input is not valid, please try again.");
+                }
 
-
+            }
+            if (showId) {
+                for (int i = 1; i <= ciList.size(); i++) {
+                    System.out.println(i + " " + ciList.get(i - 1).getID());
+                }
+                try {
+                    chosenOption = Integer.parseInt(TextUi.scanner.nextLine());
+                    String st = String.valueOf(ciList.get(chosenOption - 1).getID());
+                    System.out.println("You have chosen: " + st);
+                    showChance = false;
+                } catch (NumberFormatException e) {
+                    System.out.println("Your input is not valid, please try again.");
+                }
+            }
         }
-
-
     }
-}
 }
