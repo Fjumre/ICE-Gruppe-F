@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     static UserHandler userhandler = new UserHandler("user.txt");
     static TextUi textUi = new TextUi(userhandler);
+
     public static void main(String[] args) {
         UserHandler userhandler = new UserHandler("user.txt");
         TextUi textUi = new TextUi(userhandler);
@@ -19,7 +20,7 @@ public class Main {
     }
 
 
-    private static void giveUserOptions () {
+    private static void giveUserOptions() {
 
         String userInput = TextUi.getUserInput();
         System.out.println(userInput);
@@ -35,13 +36,38 @@ public class Main {
                 giveUserOptions();
         }
 
+        Scanner sc = new Scanner(System.in);
+        boolean loginMenu = false;
+
+        if (loginMenu) {
+            System.out.println("In the following questioner, answer Yes with Y or No with N");
+            String a1, a2, a3;
+
+            System.out.println("Do you smoke? (y/n)");
+            System.out.print("");
+            a1 = sc.nextLine();  // consume the newline character
+
+            System.out.println("Do you regularly do any form for exercise or motion? (y/n)");
+            System.out.print("");
+            a2 = sc.nextLine();
+
+            System.out.println("Do you take any type of sun bath or walk under the sun at least 4 hours a day? (y/n)");
+            System.out.print("");
+            a3 = sc.nextLine();
+
+            System.out.println("Your answers: ");
+            System.out.println("Question 1: " + a1);
+            System.out.println("Question 2: " + a2);
+            System.out.println("Question 3: " + a3);
+
+            sc.close();
+
+        }
 
 
     }
+        /*Scanner sc = new Scanner(System.in);
 
-
-
-        Scanner scanner = new Scanner(System.in);
         boolean questionnaire = true;
         boolean symptoms = true;
 
@@ -76,6 +102,7 @@ public class Main {
             scanner.close();
 
         }
+        */
 
 
     }
