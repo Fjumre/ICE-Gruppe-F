@@ -2,3 +2,4 @@ n,n
 pp,pp
 a,a
 a,n
+a,s
