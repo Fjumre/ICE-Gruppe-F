@@ -15,6 +15,7 @@ public class DBConnector {
     static final String PASS = "G5no394E!";
     private static String[] newUser;
 
+
     public static List<User> createUser() {
             List<User> users = new ArrayList<>();
             Connection conn = null;
@@ -46,7 +47,7 @@ public class DBConnector {
 
         try {
             //STEP 1: Register JDBC driver
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
             //STEP 2: Open a connection
             System.out.println("Connecting to database...");

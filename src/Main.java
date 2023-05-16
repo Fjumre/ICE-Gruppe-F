@@ -16,7 +16,7 @@ public class Main {
         //List<User> users= DBConnector.createUser();
         UserHandler userhandler = new UserHandler("user.txt");
         TextUi textUi = new TextUi(userhandler);
-        List<CancerInfo> ciList = DBConnector.getCancerData();
+
 
 
         try {
@@ -76,6 +76,7 @@ public class Main {
 
             loginMenu = false;
             showMainMenu = true;
+
         }if (showMainMenu) {
             System.out.println("Welcome to main menu");
             System.out.println("1. See cancer list");

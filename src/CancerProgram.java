@@ -1,4 +1,4 @@
-public class CancerProgram {
+/*public class CancerProgram {
     double chanceProcent;
 
     public searchByCancerInfo(){
@@ -10,4 +10,4 @@ public class CancerProgram {
     public void searchByCancerSickness(){
 
     }
-}
+}*/
