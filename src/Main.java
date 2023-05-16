@@ -10,11 +10,13 @@ public class Main {
     static boolean showSymptoms = false;
     static boolean showId = false;
     private static int chosenOption;
+    static boolean showMainMenu = false;
 
     public static void main(String[] args) {
         //List<User> users= DBConnector.createUser();
         UserHandler userhandler = new UserHandler("user.txt");
         TextUi textUi = new TextUi(userhandler);
+        List<CancerInfo> ciList = DBConnector.getCancerData();
 
 
         try {
@@ -70,8 +72,36 @@ public class Main {
             System.out.println("Question 2: " + a2);
             System.out.println("Question 3: " + a3);
 
-            sc.close();
+            //sc.close();
 
+            loginMenu = false;
+            showMainMenu = true;
+        }if (showMainMenu) {
+            System.out.println("Welcome to main menu");
+            System.out.println("1. See cancer list");
+            System.out.println("2. See symptoms list");
+            System.out.println("3. See chance list");
+            int s = Integer.parseInt(TextUi.scanner.nextLine());
+            switch (s){
+                case 1:
+                    showMainMenu = false;
+                    showCancer = true;
+                    break;
+                case 2:
+                    showSymptoms = true;
+                    showMainMenu = false;
+                    break;
+                case 3:
+                    showChance = true;
+                    showMainMenu = false;
+                    break;
+                case 4:
+                    showId = true;
+                    showMainMenu = false;
+                    break;
+                default:
+                    System.out.println("Your input is not valid, please try again.");
+            }
         }
 
         if (showCancer) {

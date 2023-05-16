@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UserHandler {
-    //static ArrayList<User> users = new ArrayList<>();
-    static List<User> users= DBConnector.createUser();
+    static ArrayList<User> users = new ArrayList<>();
+    //static List<User> users= DBConnector.createUser();
     File file;
     Scanner scanner;
 

@@ -68,16 +68,16 @@ public class DBConnector {
 
                 String name = rs.getString("Name");
                 String symptoms = rs.getString("Symptoms");
-                String chanceprocent = rs.getString("ChanceProcent");
-                String cancerinfo = rs.getString("CancerInfo");
-                String lifestyle = rs.getString("LifeStyle");
+                String chance = rs.getString("Chance");
+                //String cancerinfo = rs.getString("CancerInfo");
+                //String lifestyle = rs.getString("LifeStyle");
                 List<String> allSymptoms = new ArrayList<>();
                 String[] symptom = symptoms.split(", ");
                 for(int i = 0; i < symptom.length; i++){
                     allSymptoms.add(symptom[i]);
                 }
 
-                System.out.println(name + ": " + symptoms + ": " + chanceprocent + ": " + cancerinfo + ": " + lifestyle);
+                System.out.println(name + ": " + symptoms + ": " + chance);
                 //Cancer ca = new Cancer(name, symptoms, chanceprocent, cancerinfo);
             }
             //STEP 5: Clean-up environment
