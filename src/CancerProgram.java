@@ -1,41 +1,46 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class CancerProgram extends Main{
+public class CancerProgram {
 
-    int ID;
-    String name;
-    String symptoms;
-    Float chance;
-    List<CancerInfo> showSymptoms= new ArrayList<>();
-    List<CancerInfo> showCancer = new ArrayList<>();
+    private int id;
+    private String name;
+    private String symptoms;
+    private float chance;
 
-
-
-    public CancerProgram(int ID, String name, String symptoms, Float chance, List<CancerInfo> showCancer) {
-        this.ID = ID;
+    public CancerProgram(int id, String name, String symptoms, float chance) {
+        this.id = id;
         this.name = name;
-        this.chance = chance;
         this.symptoms = symptoms;
-        this.showCancer = showCancer;
+        this.chance = chance;
     }
 
-    public List<CancerInfo> getShowCancer(){
-        return showCancer;
+    public CancerProgram(String name, List<String> symptomList, String chance) {
     }
+
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
-    }
-
-    public Float getChance() {
-        return chance;
     }
 
     public String getSymptoms() {
         return symptoms;
     }
 
-    public int getID() {
-        return ID;
+    public float getChance() {
+        return chance;
     }
+
+    public CancerProgram findCancerByName(String name, List<CancerProgram> cancerProgramList) {
+        for (CancerProgram cp : cancerProgramList) {
+            if (cp.getName().equals(name)) {
+                return cp;
+            }
+        }
+        return null;
+    }
+
 }
