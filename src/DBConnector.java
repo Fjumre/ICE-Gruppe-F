@@ -40,8 +40,8 @@ public class DBConnector {
         }
 
 
-    public static List<CancerInfo> getCancerData() {
-        List<CancerInfo> ci = new ArrayList<>();
+    public static List<CancerProgram> getCancerData() {
+        List<CancerProgram> ci = new ArrayList<>();
         Connection conn = null;
         PreparedStatement stmt = null;
 
