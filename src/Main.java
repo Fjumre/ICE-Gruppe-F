@@ -13,6 +13,8 @@ public class Main {
     static boolean showId = false;
     private static int chosenOption = 0;
     static boolean showMainMenu = false;
+    static boolean loginMenu = true;
+
 
     public static void main(String[] args) {
 
@@ -53,7 +55,7 @@ public class Main {
             }
 
             Scanner sc = new Scanner(System.in);
-            boolean loginMenu = true;
+
 
             if (loginMenu) {
                 System.out.println("In the following questioner, answer Yes with Y or No with N");
@@ -119,9 +121,10 @@ public class Main {
                     chosenOption = Integer.parseInt(sc.nextLine());
                     String st1 = ciList.get(chosenOption - 1).getName();
                     System.out.println("You have chosen: " + st1);
-                    String st1a = String.valueOf(ciList.get(chosenOption - 1).getSymptoms());
-                    String st1b = String.valueOf(ciList.get(chosenOption - 1).getChance());
-                    System.out.println(st1a + ": " + st1b);
+                    String st1a = ciList.get(chosenOption - 1).getSymptoms();
+                    String st1b = ciList.get(chosenOption - 1).getChance();
+                    System.out.println(st1a +": " + st1b);
+                    System.out.println();
                     showCancer = false;
                     showMainMenu = true;
                 } catch (NumberFormatException e) {
@@ -136,9 +139,10 @@ public class Main {
                         chosenOption = Integer.parseInt(sc.nextLine());
                         String st2 = ciList.get(chosenOption - 1).getChance();
                         System.out.println("You have chosen: " + st2);
-                        String st2a = String.valueOf(ciList.get(chosenOption - 1).getName());
-                        String st2b = String.valueOf(ciList.get(chosenOption - 1).getSymptoms());
-                        System.out.println(st2a + ": " + st2b);
+                        String st2a = ciList.get(chosenOption - 1).getName();
+                        String st2b = ciList.get(chosenOption - 1).getSymptoms();
+                        System.out.println(st2a +": " + st2b);
+                        System.out.println();
                         showChance = false;
                         showMainMenu = true;
                     } catch (NumberFormatException e) {
@@ -154,9 +158,10 @@ public class Main {
                         chosenOption = Integer.parseInt(sc.nextLine());
                         String st3 = ciList.get(chosenOption - 1).getSymptoms();
                         System.out.println("You have chosen: " + st3);
-                        String st3a = String.valueOf(ciList.get(chosenOption - 1).getName());
-                        String st3b = String.valueOf(ciList.get(chosenOption - 1).getChance());
-                        System.out.println(st3a + ": " + st3b);
+                        String st3a = ciList.get(chosenOption - 1).getName();
+                        String st3b = ciList.get(chosenOption - 1).getChance();
+                        System.out.println(st3a +": " + st3b);
+                        System.out.println();
                         showChance = false;
                         showMainMenu = true;
                     } catch (NumberFormatException e) {
@@ -172,10 +177,11 @@ public class Main {
                         chosenOption = Integer.parseInt(sc.nextLine());
                         String st4 = String.valueOf(ciList.get(chosenOption - 1).getId());
                         System.out.println("You have chosen: " + st4);
-                        String st4a = String.valueOf(ciList.get(chosenOption - 1).getName());
-                        String st4b = String.valueOf(ciList.get(chosenOption - 1).getSymptoms());
-                        String st4c = String.valueOf(ciList.get(chosenOption - 1).getChance());
-                        System.out.println(st4a + ": " + st4b +": " + st4c);
+                        String st4a = ciList.get(chosenOption - 1).getName();
+                        String st4b = ciList.get(chosenOption - 1).getSymptoms();
+                        String st4c = ciList.get(chosenOption - 1).getChance();
+                        System.out.println(st4a +": " + st4b +": " + st4c);
+                        System.out.println();
                         showChance = false;
                         showMainMenu = true;
                     } catch (NumberFormatException e) {
