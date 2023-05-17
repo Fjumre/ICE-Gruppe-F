@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -109,7 +110,7 @@ public class Main {
                 }
             }
 
-            if (showCancer) {
+            { if (showCancer) {
                 for (int i = 1; i <= ciList.size(); i++) {
                     System.out.println(i + " " + ciList.get(i - 1).getName());
                 }
@@ -122,8 +123,8 @@ public class Main {
                 } catch (NumberFormatException e) {
                     System.out.println("Your input is not valid, please try again.");
                 }
-
-                if (showChance) {
+            }
+                {if (showChance) {
                     for (int i = 1; i <= ciList.size(); i++) {
                         System.out.println(i + " " + ciList.get(i - 1).getChance());
                     }
@@ -137,8 +138,8 @@ public class Main {
                         System.out.println("Your input is not valid, please try again.");
                     }
 
-                }
-                if (showSymptoms) {
+                }}
+                    {if (showSymptoms) {
                     for (int i = 1; i <= ciList.size(); i++) {
                         System.out.println(i + " " + ciList.get(i - 1).getSymptoms());
                     }
@@ -152,8 +153,8 @@ public class Main {
                         System.out.println("Your input is not valid, please try again.");
                     }
 
-                }
-                if (showId) {
+                }}
+                {if (showId) {
                     for (int i = 1; i <= ciList.size(); i++) {
                         System.out.println(i + " " + ciList.get(i - 1).getId());
                     }
@@ -165,7 +166,7 @@ public class Main {
                         showMainMenu = true;
                     } catch (NumberFormatException e) {
                         System.out.println("Your input is not valid, please try again.");
-                    }
+                    }}
                 }
             }
         }

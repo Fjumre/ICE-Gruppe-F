@@ -67,7 +67,7 @@ public class DBConnector {
             while (rs.next()) {
                 // Retrieve by column name
 
-                Integer id = Integer.valueOf(rs.getString("Id"));
+                int id = Integer.parseInt(rs.getString("Id"));
                 String name = rs.getString("Name");
                 String symptoms = rs.getString("Symptoms");
                 String chance = rs.getString("Chance");
@@ -112,18 +112,18 @@ public class DBConnector {
         }
         return ciList;
     }
-}
+
     /*public void readName(String cancer) {
 
         Connection conn = null;
         PreparedStatement stmt = null;
-        try{
+        try {
             //STEP 1: Register JDBC driver
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 2: Open a connection
             System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 3: Execute a query
             System.out.println("Creating statement...");
@@ -131,14 +131,13 @@ public class DBConnector {
             stmt = conn.prepareStatement(sql);
 
 
-
             ResultSet rs = stmt.executeQuery();
 
             //STEP 4: Extract data from result set
-            while(rs.next()){
+            while (rs.next()) {
                 //Retrieve by column name
 
-                String name = rs.getString( "name");
+                String name = rs.getString("name");
                 System.out.println(name);
 
             }
@@ -146,28 +145,28 @@ public class DBConnector {
             rs.close();
             stmt.close();
             conn.close();
-        }catch(SQLException se){
+        } catch (SQLException se) {
             //Handle errors for JDBC
             se.printStackTrace();
-        }catch(Exception e){
+        } catch (Exception e) {
             //Handle errors for Class.forName
             e.printStackTrace();
-        }finally{
+        } finally {
             //finally block used to close resources
-            try{
-                if(stmt!=null)
+            try {
+                if (stmt != null)
                     stmt.close();
-            }catch(SQLException se2){
+            } catch (SQLException se2) {
             }// nothing we can do
-            try{
-                if(conn!=null)
+            try {
+                if (conn != null)
                     conn.close();
-            }catch(SQLException se){
+            } catch (SQLException se) {
                 se.printStackTrace();
             }//end finally try
         }//end try
 
 
-
     }*/
+    }
 
