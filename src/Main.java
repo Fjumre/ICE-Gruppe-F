@@ -41,7 +41,7 @@ public class Main {
 
         String userInput = TextUi.getUserInput();
         System.out.println(userInput);
-        while (true) {
+
             switch (userInput) {
                 case "1":
                     textUi.loginMenu();
@@ -57,6 +57,7 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             loginMenu = true;
 
+        while (true) {
             if (loginMenu) {
                 System.out.println("In the following questioner, answer Yes with Y or No with N");
                 String a1, a2, a3;
@@ -127,7 +128,7 @@ public class Main {
                     System.out.println();
                     showCancer = false;
                     showMainMenu = true;
-                    //loginMenu = false;
+
                 } catch (NumberFormatException e) {
                     System.out.println("Your input is not valid, please try again.");
                 }
@@ -163,7 +164,7 @@ public class Main {
                         String st3b = ciList.get(chosenOption - 1).getChance();
                         System.out.println(st3a +": " + st3b);
                         System.out.println();
-                        showChance = false;
+                        showSymptoms = false;
                         showMainMenu = true;
                     } catch (NumberFormatException e) {
                         System.out.println("Your input is not valid, please try again.");
@@ -183,7 +184,7 @@ public class Main {
                         String st4c = ciList.get(chosenOption - 1).getChance();
                         System.out.println(st4a +": " + st4b +": " + st4c);
                         System.out.println();
-                        showChance = false;
+                        showId = false;
                         showMainMenu = true;
                     } catch (NumberFormatException e) {
                         System.out.println("Your input is not valid, please try again.");
