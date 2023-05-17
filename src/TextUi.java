@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class TextUi {
 
+
     private static Scanner scanner;
     private final UserHandler userHandler;
 
     public TextUi(UserHandler userHandler) {
         this.userHandler = userHandler;
-        this.scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
     }
 
     public static String getUserInput() {
@@ -24,6 +25,7 @@ public class TextUi {
             System.out.println("Welcome " + userName);
             System.out.println("Press Enter to check the questionnaire");
             return scanner.nextLine();
+
         } else {
             System.out.println("Sorry, the username or password is incorrect");
             return loginMenu();
@@ -38,6 +40,7 @@ public class TextUi {
         if (userHandler.createUser(userName, password)) {
             userHandler.saveUsers();
             System.out.println("Welcome " + userName);
+
         } else {
             System.out.println("Sorry, the username or password can not be used");
             createUserMenu();

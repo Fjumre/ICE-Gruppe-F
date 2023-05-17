@@ -13,7 +13,7 @@ public class Main {
     static boolean showId = false;
     private static int chosenOption = 0;
     static boolean showMainMenu = false;
-    static boolean loginMenu = true;
+    static boolean loginMenu = false;
 
 
     public static void main(String[] args) {
@@ -55,7 +55,7 @@ public class Main {
             }
 
             Scanner sc = new Scanner(System.in);
-
+            loginMenu = true;
 
             if (loginMenu) {
                 System.out.println("In the following questioner, answer Yes with Y or No with N");
@@ -127,6 +127,7 @@ public class Main {
                     System.out.println();
                     showCancer = false;
                     showMainMenu = true;
+                    //loginMenu = false;
                 } catch (NumberFormatException e) {
                     System.out.println("Your input is not valid, please try again.");
                 }
