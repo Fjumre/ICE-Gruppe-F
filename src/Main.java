@@ -130,7 +130,7 @@ public class Main {
                     }
                     try {
                         chosenOption = Integer.parseInt(sc.nextLine());
-                        String st2 = String.valueOf(ciList.get(chosenOption - 1).getChance());
+                        String st2 = ciList.get(chosenOption - 1).getChance();
                         System.out.println("You have chosen: " + st2);
                         showChance = false;
                         showMainMenu = true;
@@ -145,7 +145,7 @@ public class Main {
                     }
                     try {
                         chosenOption = Integer.parseInt(sc.nextLine());
-                        String st3 = String.valueOf(ciList.get(chosenOption - 1).getSymptoms());
+                        String st3 = ciList.get(chosenOption - 1).getSymptoms();
                         System.out.println("You have chosen: " + st3);
                         showChance = false;
                         showMainMenu = true;
