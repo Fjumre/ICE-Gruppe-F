@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Scanner;
 
-public class CancerInfo {
+public class CancerInfo{
 
     static List<CancerProgram> ciList = DBConnector.getCancerData();
     File file;
