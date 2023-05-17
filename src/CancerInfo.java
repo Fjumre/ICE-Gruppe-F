@@ -27,7 +27,7 @@ public class CancerInfo {
             int id = Integer.parseInt(values[0]);
             String name = values[1];
             String symptoms = values[2];
-            float chance = Float.parseFloat(values[3]);
+            String chance = String.valueOf(values[3]);
             ciList.add(new CancerProgram(id, name, symptoms, chance));
         }
     }

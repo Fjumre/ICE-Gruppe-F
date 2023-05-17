@@ -5,16 +5,13 @@ public class CancerProgram {
     private int id;
     private String name;
     private String symptoms;
-    private float chance;
+    private String chance;
 
-    public CancerProgram(int id, String name, String symptoms, float chance) {
+    public CancerProgram(int id, String name, String symptoms, String chance) {
         this.id = id;
         this.name = name;
         this.symptoms = symptoms;
         this.chance = chance;
-    }
-
-    public CancerProgram(String id, String name, String symptoms, String chance) {
     }
 
     public int getId() {
@@ -31,7 +28,7 @@ public class CancerProgram {
         return symptoms;
     }
 
-    public float getChance() {
+    public String getChance() {
 
         return chance;
     }

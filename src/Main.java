@@ -88,23 +88,24 @@ public class Main {
                 System.out.println("4. See ID list");
                 int s = Integer.parseInt(sc.nextLine());
                 switch (s) {
-                    case 1 -> {
+                    case 1:
                         showMainMenu = false;
                         showCancer = true;
-                    }
-                    case 2 -> {
+                        break;
+                    case 2:
+                        showMainMenu = false;
                         showSymptoms = true;
+                        break;
+                    case 3:
                         showMainMenu = false;
-                    }
-                    case 3 -> {
                         showChance = true;
-                        showMainMenu = false;
-                    }
-                    case 4 -> {
+                        break;
+                    case 4:
                         showId = true;
                         showMainMenu = false;
-                    }
-                    default -> System.out.println("Your input is not valid, please try again.");
+                        break;
+                    default:
+                        System.out.println("Your input is not valid, please try again.");
                 }
             }
 

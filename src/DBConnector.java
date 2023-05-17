@@ -67,7 +67,7 @@ public class DBConnector {
             while (rs.next()) {
                 // Retrieve by column name
 
-                String id = rs.getString("Id");
+                Integer id = Integer.valueOf(rs.getString("Id"));
                 String name = rs.getString("Name");
                 String symptoms = rs.getString("Symptoms");
                 String chance = rs.getString("Chance");
@@ -80,7 +80,7 @@ public class DBConnector {
                 }*/
 
                 // Create new CancerProgram and add to list
-                CancerProgram cancerProgram = new CancerProgram (id, name, symptoms ,chance);
+                CancerProgram cancerProgram = new CancerProgram(id, name, symptoms, chance);
                 ciList.add(cancerProgram);
             }
 
