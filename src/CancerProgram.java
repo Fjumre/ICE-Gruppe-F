@@ -19,12 +19,10 @@ public class CancerProgram {
     }
 
     public String getName() {
-
         return name;
     }
 
     public String getSymptoms() {
-
         return symptoms;
     }
 
@@ -36,6 +34,22 @@ public class CancerProgram {
     public CancerProgram findCancerByName(String name, List<CancerProgram> cancerProgramList) {
         for (CancerProgram cp : cancerProgramList) {
             if (cp.getName().equals(name)) {
+                return cp;
+            }
+        }
+        return null;
+    }
+    public CancerProgram findCancerByChance(String chance, List<CancerProgram> cancerProgramList) {
+        for (CancerProgram cp : cancerProgramList) {
+            if (cp.getChance().equals(chance)) {
+                return cp;
+            }
+        }
+        return null;
+    }
+    public CancerProgram findCancerBySymptoms(String symptoms, List<CancerProgram> cancerProgramList) {
+        for (CancerProgram cp : cancerProgramList) {
+            if (cp.getSymptoms().equals(symptoms)) {
                 return cp;
             }
         }

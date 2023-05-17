@@ -131,7 +131,7 @@ public class Main {
                         chosenOption = Integer.parseInt(sc.nextLine());
                         String st2 = String.valueOf(ciList.get(chosenOption - 1).getChance());
                         System.out.println("You have chosen: " + st2);
-                        showChance = false;
+                        //showChance = false;
                         showMainMenu = true;
                     } catch (NumberFormatException e) {
                         System.out.println("Your input is not valid, please try again.");
