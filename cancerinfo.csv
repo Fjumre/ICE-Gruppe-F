@@ -1,5 +1,5 @@
 id,name,symptoms,chance
-0,"Skin Cancer","A new spot on your skin ","Between 0.3% and 1 %"
-1,"Lung Cancer","A cough that persists or worsens","Around 6.25 %"
-2,"Brain Tumor","Headaches that are more often and severe.","Less than 1 %"
+1,"Skin Cancer","A new spot on your skin ","Between 0.3% and 1 %"
+2,"Lung Cancer","A cough that persists or worsens","Around 6.25 %"
+3,"Brain Tumor","Headaches that are more often and severe.","Less than 1 %"
 
