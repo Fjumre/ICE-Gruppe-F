@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TextUi {
 
-    private final Scanner scanner;
+    private static Scanner scanner;
     private final UserHandler userHandler;
 
     public TextUi(UserHandler userHandler) {

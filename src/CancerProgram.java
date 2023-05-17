@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class CancerProgram {
@@ -8,7 +7,7 @@ public class CancerProgram {
     private String symptoms;
     private float chance;
 
-    public CancerProgram(int id, String name, String symptoms, float chance) {
+    public CancerProgram(String name, String symptoms) {
         this.id = id;
         this.name = name;
         this.symptoms = symptoms;
@@ -23,14 +22,17 @@ public class CancerProgram {
     }
 
     public String getName() {
+
         return name;
     }
 
     public String getSymptoms() {
+
         return symptoms;
     }
 
     public float getChance() {
+
         return chance;
     }
 

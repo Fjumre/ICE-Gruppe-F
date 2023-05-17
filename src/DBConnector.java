@@ -67,19 +67,20 @@ public class DBConnector {
             while (rs.next()) {
                 // Retrieve by column name
 
+                String id = rs.getString("Id");
                 String name = rs.getString("Name");
                 String symptoms = rs.getString("Symptoms");
                 String chance = rs.getString("Chance");
 
-                // Split symptoms into a list of strings
+               /* // Split symptoms into a list of strings
                 String[] symptomArray = symptoms.split(", ");
                 List<String> symptomList = new ArrayList<>();
                 for (String symptom : symptomArray) {
                     symptomList.add(symptom);
-                }
+                }*/
 
                 // Create new CancerProgram and add to list
-                CancerProgram cancerProgram = new CancerProgram(name, symptomList, chance);
+                CancerProgram cancerProgram = new CancerProgram(name, chance);
                 ciList.add(cancerProgram);
             }
 

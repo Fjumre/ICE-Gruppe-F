@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -25,11 +24,11 @@ public class CancerInfo {
         while (scanner.hasNextLine()) {
             String input = scanner.nextLine();
             String[] values = input.split(";");
-            int id = Integer.parseInt(values[0]); // extract the id from the input
+            int id = Integer.parseInt(values[0]);
             String name = values[1];
             String symptoms = values[2];
-            float chance = Float.parseFloat(values[3]); // extract the chance from the input
-            ciList.add(new CancerProgram(id, name, symptoms, chance));
+            float chance = Float.parseFloat(values[3]);
+            ciList.add(new CancerProgram(name, symptoms));
         }
     }
 }

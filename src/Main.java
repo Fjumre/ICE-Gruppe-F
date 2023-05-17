@@ -73,7 +73,7 @@ public class Main {
                 System.out.println("Question 1: " + a1);
                 System.out.println("Question 2: " + a2);
                 System.out.println("Question 3: " + a3);
-
+                System.out.println("");
                 //sc.close();
 
                 loginMenu = false;
@@ -88,24 +88,23 @@ public class Main {
                 System.out.println("4. See ID list");
                 int s = Integer.parseInt(sc.nextLine());
                 switch (s) {
-                    case 1:
+                    case 1 -> {
                         showMainMenu = false;
                         showCancer = true;
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         showSymptoms = true;
                         showMainMenu = false;
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         showChance = true;
                         showMainMenu = false;
-                        break;
-                    case 4:
+                    }
+                    case 4 -> {
                         showId = true;
                         showMainMenu = false;
-                        break;
-                    default:
-                        System.out.println("Your input is not valid, please try again.");
+                    }
+                    default -> System.out.println("Your input is not valid, please try again.");
                 }
             }
 
@@ -114,7 +113,6 @@ public class Main {
                     System.out.println(i + " " + ciList.get(i - 1).getName());
                 }
                 try {
-
                     chosenOption = Integer.parseInt(sc.nextLine());
                     String st1 = ciList.get(chosenOption - 1).getName();
                     System.out.println("You have chosen: " + st1);
