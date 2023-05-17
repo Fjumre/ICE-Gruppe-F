@@ -7,14 +7,14 @@ public class CancerProgram {
     private String symptoms;
     private float chance;
 
-    public CancerProgram(String name, String symptoms) {
+    public CancerProgram(int id, String name, String symptoms, float chance) {
         this.id = id;
         this.name = name;
         this.symptoms = symptoms;
         this.chance = chance;
     }
 
-    public CancerProgram(String name, List<String> symptomList, String chance) {
+    public CancerProgram(String id, String name, String symptoms, String chance) {
     }
 
     public int getId() {

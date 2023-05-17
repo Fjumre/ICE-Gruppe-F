@@ -80,7 +80,7 @@ public class DBConnector {
                 }*/
 
                 // Create new CancerProgram and add to list
-                CancerProgram cancerProgram = new CancerProgram(name, chance);
+                CancerProgram cancerProgram = new CancerProgram (id, name, symptoms ,chance);
                 ciList.add(cancerProgram);
             }
 
